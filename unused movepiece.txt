@@ -1,0 +1,53 @@
+gameend = False
+player = "X"
+playboard = "0"
+validmove1 = False
+currentblock = ""
+
+playercolors = {X : "\u001B[91m, O : \u001B[0m"}
+
+Alist = []
+Blist = []
+Clist = []
+Dlist = []
+Elist = []
+Flist = []
+Glist = []
+Hlist = []
+Ilist = []
+
+Xwins = []
+Owins = []
+
+boardchecks = {"A" : Alist, "B" : Blist, "C" : Clist, "D" : Dlist, "E" : Elist, "F" : Flist, "G" : Glist, "H" : Hlist, "I" : Ilist}
+
+def pieceadd(usermove, player):
+  board[usermove] = playercolors[player]
+
+def boardcheck():
+  for i in range 9:
+    for key, value in board:
+      board[key[0]]
+      
+#lol how do you check if you won or notk speedrunnn
+while gameend == False:
+  usermove = input("Player " + player ", please enter a move.\n")
+
+  if usermove[1] = "a" or usermove[1] = "b" or usermove[1] = "c":
+    if usermove[2] = "1" or usermove[2] = "2" or usermove[2] = "c":
+      if board[usermove] == "    ":
+        validmove1 = True 
+
+  if usermove[0] == playboard and validmove1 == True:
+    pieceadd(usermove, player)
+  elif playboard != 0 and validmove1 == True:
+    pieceadd(usermove, player)
+  if player == "X":
+    player = "O"
+  else:
+    player = "X"
+
+  printboard()
+  exec(open("printboard.py").read())
+#"\u001B[91m    \u001B[0m" #red
+#"\u001B[36m    \u001B[0m" #blue

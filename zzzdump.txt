@@ -1,0 +1,19 @@
+for i in board:
+  if i[0:2] == "Cc" or i[0:2] == "Fc" or i[0:2] == "Ic":
+    print(board[i] + "  ", end = i[2])
+    if i != "Ic3":
+      if i[2] == "3":
+        print("\n\u001B[107m---|---|----|----|---|----|----|---|---\u001B[0m")
+      else:  
+        print("\n---|---|---\u001B[107m-|-\u001B[0m---|---|---\u001B[107m-|-\u001B[0m---|---|---")
+    else:
+      print("\n","a   b   c     a   b   c     a   b   c")
+  else:
+    if i[1] == "c":
+      print(board[i], end = "\u001B[107m | \u001B[0m")
+    else:
+      print(board[i], end = "|")
+print("\n") # formatting
+
+
+#notes: 31 pink, 32 green, 33 orange, 34 darkest blue, 35 purple, 36 lighter but not light blue, 91 red, 92 slightly less neon green, 93 orangey yellow, 94 blue, 95 lavender, 96 electric blue
