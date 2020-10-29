@@ -1,7 +1,7 @@
-import os
+#import os
 
 def printboard(board,currentblock,dead):
-  os.system("clear")
+  #os.system("clear")
   for i in board:
     if i[0:2] == "Cc" or i[0:2] == "Fc" or i[0:2] == "Ic":
       print(board[i] + "  ", end = i[2])
